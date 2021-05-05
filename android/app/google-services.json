@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "292563814679",
-    "project_id": "flutter-playground-542bd",
-    "storage_bucket": "flutter-playground-542bd.appspot.com"
+    "project_number": "608603707762",
+    "project_id": "flutter-playground-9aa0d",
+    "storage_bucket": "flutter-playground-9aa0d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:292563814679:android:9cfbdc256f65a7adb6cf52",
+        "mobilesdk_app_id": "1:608603707762:android:06758ffabe03b4519de5eb",
         "android_client_info": {
           "package_name": "com.example.navigation_tutoriall"
         }
       },
       "oauth_client": [
         {
-          "client_id": "292563814679-36sa887ulmq2ojurqlaugb839a679078.apps.googleusercontent.com",
+          "client_id": "608603707762-ponetnk6aulli97sadebqgivpkoplkle.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDqHM9yqNPtJJhYFcrZ8Ebsj8gYN8B8KmU"
+          "current_key": "AIzaSyBx5lrUFXJMQHGafQfROO-KoJjO5Uw0ZWI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "292563814679-36sa887ulmq2ojurqlaugb839a679078.apps.googleusercontent.com",
+              "client_id": "608603707762-ponetnk6aulli97sadebqgivpkoplkle.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
