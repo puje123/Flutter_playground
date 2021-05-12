@@ -32,6 +32,8 @@ dependencies:
   http: ^0.13.1
   firebase_core: ^1.1.0
   firebase_database: ^6.1.2
+  mongol: ^1.1.0
+
 
 dev_dependencies:
   flutter_test:
@@ -50,6 +52,11 @@ flutter:
 
   assets:
     - images/lake.jpg
+    - assets/img/mori.jpg
+  fonts:
+    - family: MongolianScript
+      fonts:
+        - asset: assets/fonts/MongolianScript.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:
