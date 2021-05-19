@@ -1,5 +1,7 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
-import 'package:mongol/mongol.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -15,29 +17,46 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Orientation deviceOrientation = MediaQuery.of(context).orientation;
+
     return Scaffold(
-      body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Image(
-                image: AssetImage('assets/img/mori.jpg'),
+      body: Column(
+        children: [
+          Expanded(
+            flex: 10,
+            child: Container(
+              width: double.infinity,
+              height: double.infinity,
+              color: Colors.lightBlue,
+              child: OrientationBuilder(
+                  builder: (context, orientation) {
+                    if (orientation == Orientation.portrait) {
+                      return Text('Hello');
+                    } else {
+                      return Text('Hello My name is BLABLABLA');
+                    }
+                  }
               ),
-              Container(
-                height: 400,
-                width: 400,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: MongolText(
-                    'ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ? ᠮᠢᠨᠦ ᠨᠡᠷ᠎ᠡ ᠶᠢ ᠫᠦᠷᠪᠦᠳᠣᠷᠵᠢ ᠭᠡᠳᠡᠭ᠃ ᠣᠳᠣ 24 ᠨᠠᠰᠤᠲᠠᠢ᠃ ᠮᠠᠨ ᠤ ᠭᠡᠷ ᠪᠦᠯᠢ 4 ᠬᠦᠮᠦᠨ ᠪᠠᠶᠢᠳᠠᠭ᠃ ᠡᠵᠢ᠂ ᠠᠪᠤ᠂ ᠳᠡᠭᠦᠦ 3 ᠲᠠᠶᠢᠭ᠎ᠠ ᠪᠠᠨ ᠴᠤᠭ ᠠᠮᠢᠳᠤᠷᠠᠳᠠᠭ᠃ ᠪᠢ ᠡᠨᠡ ᠠᠫᠫ ᠢ ᠠᠰᠢᠭᠯᠠᠵᠤ ᠰᠠᠶᠢᠨ ᠰᠤᠷᠠᠭ᠎ᠠ ᠦᠭᠡᠢ ᠪᠠᠶᠢᠭ᠎ᠠ᠃ ᠡᠨᠡ ᠪᠣᠯ ᠮᠢᠨᠦ ᠭᠡᠷ ᠦᠨ ᠳᠠᠭᠠᠭᠠᠯᠭᠠᠪᠤᠷᠢ᠃',
-                    style:
-                        TextStyle(fontFamily: 'MongolianScript', fontSize: 25),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: OrientationBuilder(
+              builder: (context, orientation) => Container(
+                color: Colors.white,
+                child: Center(
+                  child: Text(
+                    'Dood tal\n\n' +
+                        '[MediaQuery orientation]:\n$deviceOrientation\n\n' +
+                        '[OrientationBuilder]:\n$orientation',
+                    style: TextStyle(color: Colors.blue, fontSize: 18),
                   ),
                 ),
               ),
-            ],
+            ),
           ),
-        ),
+        ],
+      ),
     );
   }
 }

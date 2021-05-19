@@ -53,6 +53,7 @@ flutter:
   assets:
     - images/lake.jpg
     - assets/img/mori.jpg
+    - assets/img/ME.jpg
   fonts:
     - family: MongolianScript
       fonts:
